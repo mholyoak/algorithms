@@ -1,1 +1,1 @@
-# algorithms
+# algorithms - Try out the different std library algorithms
