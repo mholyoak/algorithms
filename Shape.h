@@ -5,6 +5,8 @@
 #ifndef ALGORITHMS_SHAPE_H
 #define ALGORITHMS_SHAPE_H
 
+#include <string>
+
 class IShape {
 public:
     virtual ~IShape() {};
@@ -16,6 +18,8 @@ public:
     virtual void SetWidth(int width) = 0;
 
     virtual int GetArea() const = 0;
+
+    virtual operator std::string() const = 0;
 };
 
 class Shape : public IShape {
@@ -28,6 +32,8 @@ public:
     int GetWidth() const override;
     void SetWidth(int width) override;
     int GetArea() const override;
+
+    operator std::string() const override;
 
 private:
     int _width = 1;

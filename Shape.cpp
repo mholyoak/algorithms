@@ -40,3 +40,9 @@ int Shape::GetArea() const
 {
     return _width * _height;
 }
+
+Shape::operator std::string() const
+{
+    return "W: " + std::to_string(_width) + " H: " + std::to_string(_height);
+}
+
